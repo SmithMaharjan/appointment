@@ -15,11 +15,13 @@ import Footer from './components/footer'
 const App = () => {
   return (
     <div className=' mx-4 sm:mx-[10%]'>
-      <Navbar />
+      <div className=' sticky top-0 z-50 bg-white'>
+        <Navbar />
+      </div>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/doctors' element={<Doctors />} />
-        <Route path='/doctors/:specialily' element={<Doctor />} />
+        <Route path='/doctors/:speciality' element={<Doctors />} />
         <Route path='/login' element={<Login />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
