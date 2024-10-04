@@ -12,7 +12,7 @@ const TopDoctors = () => {
 
             <div className=' grid grid-cols-auto gap-3 pt-5 gap-y-6 sm:px-0 w-full'>
                 {doctors.slice(0, 10).map((doctor, index) => (
-                    <div key={index} onClick={() => { navigate(`/appointment/${doctor._id}`) }} className=' border border-blue-200 rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-500 '>
+                    <div key={index} onClick={() => { navigate(`/appointment/${doctor._id}`), scrollTo(0, 0) }} className=' border border-blue-200 rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-500 '>
                         <img className=' bg-blue-50' src={doctor.image} />
                         <div className=' p-4'>
                             <div className=' flex items-center gap-2'>
@@ -27,7 +27,7 @@ const TopDoctors = () => {
 
                 ))}
             </div>
-            <button onClick={() => navigate("/doctors")} className=' bg-blue-200 text-gray-600 px-12 py-3 rounded-full mt-10 font-medium text-sm'>more</button>
+            <button onClick={() => { navigate("/doctors"), scrollTo(0, 0) }} className=' bg-blue-200 text-gray-600 px-12 py-3 rounded-full mt-10 font-medium text-sm'>more</button>
 
         </div>
     )
